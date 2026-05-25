@@ -160,4 +160,14 @@ export default async function Home() {
               <div key={item.id} className="bg-slate-50 p-3 rounded-lg border border-slate-100">
                 <div className="flex justify-between items-center mb-1">
                   <span className="font-bold text-slate-800 text-sm">{item.name}</span>
-                  <span className="text-xs text-slate-4
+                  <span className="text-xs text-slate-400">{new Date(item.created_at).toLocaleDateString()}</span>
+                </div>
+                <p className="text-slate-600 text-sm">{item.message}</p>
+              </div>
+            ))
+          )}
+        </div>
+      </section>
+    </main>
+  );
+}
