@@ -1,3 +1,6 @@
+'use client';
+
+import { useRef } from 'react';
 import { addComment } from '../app/actions';
 
 interface GuestbookProps {
@@ -7,6 +10,9 @@ interface GuestbookProps {
 }
 
 export default function Guestbook({ commentList, errorMsg, dbConnected }: GuestbookProps) {
+  // Create a reference to the HTML form element
+  const formRef = useRef<HTMLFormElement>(null);
+
   return (
     <section className="bg-white p-6 rounded-xl shadow-md border border-slate-200">
       <h2 className="text-2xl font-bold text-slate-800 mb-2">Guestbook / Leave a Message</h2>
@@ -24,7 +30,15 @@ export default function Guestbook({ commentList, errorMsg, dbConnected }: Guestb
         </div>
       )}
 
-      <form action={addComment} className="space-y-4 mb-8">
+      {/* Form connected to the Server Action with an auto-reset function after successful submission */}
+      <form 
+        ref={formRef}
+        action={async (formData) => {
+          await addComment(formData); // Execute the database save function on the server
+          formRef.current?.reset();   // Clear all input fields after a successful submission
+        }} 
+        className="space-y-4 mb-8"
+      >
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
           <input 
