@@ -24,7 +24,6 @@ export default function Guestbook({ commentList, errorMsg, dbConnected }: Guestb
         </div>
       )}
 
-      {/* Form terhubung langsung ke Server Action */}
       <form action={addComment} className="space-y-4 mb-8">
         <div>
           <label className="block text-sm font-medium text-slate-700 mb-1">Your Name</label>
