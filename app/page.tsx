@@ -4,6 +4,7 @@ import About from '../components/About';
 import Experience from '../components/Experience';
 import Skills from '../components/Skills';
 import Education from '../components/Education';
+import Awards from '../components/Awards';
 import Guestbook from '../components/Guestbook';
 
 export default async function Home({ searchParams }: { searchParams: any }) {
@@ -28,6 +29,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
       <Experience />
       <Skills />
       <Education />
+      <Awards />
       <hr className="border-slate-200" />
       <Guestbook commentList={commentList} errorMsg={errorMsg} dbConnected={dbConnected} />
     </main>
