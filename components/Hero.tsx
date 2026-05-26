@@ -8,10 +8,6 @@ export default function Hero() {
             src="/profile.jpg" 
             alt="Ms. Lisye" 
             className="w-full h-full object-cover"
-            onError={(e) => {
-              // If the photo fails to load, hide the image container or provide a placeholder
-              e.currentTarget.style.display = 'none';
-            }}
           />
         </div>
         
