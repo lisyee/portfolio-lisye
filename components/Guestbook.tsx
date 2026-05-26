@@ -16,7 +16,7 @@ export default function Guestbook({ commentList, errorMsg, dbConnected }: Guestb
   return (
     <section className="bg-white p-6 rounded-xl shadow-md border border-slate-200">
       <h2 className="text-2xl font-bold text-slate-800 mb-2">Guestbook / Leave a Message</h2>
-      <p className="text-slate-500 mb-6 text-sm">Testing area for interviewers to submit feedback or messages.</p>
+      <p className="text-slate-500 mb-6 text-sm">Please feel free to submit your feedback or messages.</p>
 
       {!dbConnected && (
         <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md text-sm mb-4">
