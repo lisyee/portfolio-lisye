@@ -79,7 +79,7 @@ export default function Experience() {
         {/* Other Professional Experience */}
         <div className="border-l-4 border-slate-300 pl-4">
           <h3 className="text-xl font-bold text-slate-900">Other Professional Experience</h3>
-          <p className="text-slate-500 font-medium">Freelance & Corporate Roles | Feb 2018 - June 22</p>
+          <p className="text-slate-500 font-medium">Freelance & Corporate Roles | Feb 2018 - June 2022</p>
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             <li className="text-justify">
               <strong>Computer Science Private Tutor (2019 - 2022):</strong> Mentored students in Java, C++, and Web Development (HTML/CSS/JS), fostering long-term interest in software engineering.
