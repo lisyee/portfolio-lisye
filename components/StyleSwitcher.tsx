@@ -7,7 +7,7 @@ export default function StyleSwitcher() {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between p-3 bg-slate-50 rounded-xl border border-slate-200/60 shadow-sm gap-4 mb-6">
+    <div className="flex flex-wrap items-center justify-between p-3 bg-slate-100 rounded-xl border border-slate-200/60 shadow-sm gap-4 mb-6">
       <div className="text-xs font-bold text-slate-700 uppercase tracking-wider">
         🎨 Switch Website CSS Style:
       </div>
