@@ -8,6 +8,8 @@ import Awards from '../components/Awards';
 import Guestbook from '../components/Guestbook';
 import StyleSwitcher from '../components/StyleSwitcher';
 
+export const dynamic = 'force-dynamic';
+
 export default async function Home({ searchParams }: { searchParams: any }) {
   const errorMsg = searchParams?.error;
   
