@@ -7,8 +7,7 @@ export default function StyleSwitcher() {
   };
 
   return (
-    <div className="flex flex-wrap items-center justify-between p-3 bg-slate-100 dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 gap-4 mb-6">
-      <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+    <div className="flex flex-wrap items-center justify-between p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm gap-4 mb-6">  <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">
         🎨 Switch Website CSS Style:
       </div>
       <div className="flex flex-wrap gap-2">
@@ -28,7 +27,7 @@ export default function StyleSwitcher() {
           onClick={() => changeStyle('brutalist')} 
           className="px-3 py-1.5 text-xs font-bold rounded-lg bg-white border shadow-sm hover:bg-slate-50 text-slate-800 transition duration-200"
         >
-          ⚡ Neo-Brutalist (Tech Retro)
+          ⚡Tech Retro
         </button>
       </div>
     </div>
