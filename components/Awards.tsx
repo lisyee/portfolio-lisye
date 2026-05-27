@@ -15,13 +15,13 @@ export default function Awards() {
     {
       title: "Second Runner-Up",
       competition: "The 18th Strategies of Warring States Period National Innovation & Entrepreneurship Competition 2023",
-      date: "06/2023",
+      date: "June 2023",
       details: "Group: The NDHU Squad. Developed remote veterinarian services project using React."
     },
     {
       title: "First Choice Award (優勝獎)",
       competition: "2023 Hualien County HSH Innovation and Entrepreneurship Competition",
-      date: "06/2023",
+      date: "June 2023",
       details: "Group: Mission Possible. Developed a smart solar panel site assessment system using Random Forest and self-built sensors."
     },
     {
