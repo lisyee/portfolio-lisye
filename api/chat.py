@@ -15,13 +15,20 @@ client = boto3.client(
     aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY')
 )
 
-async def generate_bedrock_stream(user_message: str):
+async def generate_bedrock_stream(user_message: str, session_id: str):
     try:
+        client = boto3.client(
+            'bedrock-agent-runtime',
+            region_name=os.environ.get('AWS_REGION', 'ap-southeast-2'),
+            aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
+            aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY')
+        )
+        
         response = client.invoke_agent(
             agentId='GFTJXV4A2X',
             agentAliasId='YQND3POFOH',
             inputText=user_message,
-            sessionId='sesi-portfolio-user'
+            sessionId=session_id # 2. GUNAKAN SESSION ID DARI FRONTEND
         )
         
         completion = response.get('completion')
@@ -35,11 +42,15 @@ async def generate_bedrock_stream(user_message: str):
         yield f"Error: {str(e)}"
 
 @app.post("/api/chat")
+@app.post("/")
 async def chat_endpoint(request: Request):
-    # Get the input from user
-    body = await request.json()
-    user_message = body.get("message", "Halo Nova")
-    
-    # Return the answer or output
-    return StreamingResponse(generate_bedrock_stream(user_message), media_type="text/plain")
-
+    try:
+        body = await request.json()
+        user_message = body.get("message", "Hello Nova")
+        
+        session_id = body.get("sessionId", "portfolio-default-fallback")
+        
+        return StreamingResponse(generate_bedrock_stream(user_message, session_id), media_type="text/plain")
+    except Exception as e:
+        logger.error(f"Global Endpoint Crash: {str(e)}")
+        return {"error": "Internal Server Error", "details": str(e)}
