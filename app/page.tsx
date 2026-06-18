@@ -70,10 +70,6 @@ export default async function Home({ searchParams }: { searchParams: any }) {
         <div className={sectionWrapper}>
           <Awards />
         </div>
-
-        <div className={sectionWrapper}>
-          <Chatbox />
-        </div>
         
         <hr className={currentStyle === 'minimalist' ? 'hidden' : 'border-slate-200'} />
         
@@ -82,6 +78,7 @@ export default async function Home({ searchParams }: { searchParams: any }) {
         </div>
         
       </main>
+      <Chatbox currentStyle={currentStyle} />
     </div>
   );
 }
