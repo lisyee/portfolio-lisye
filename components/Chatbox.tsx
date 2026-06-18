@@ -16,15 +16,17 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
   const [input, setInput] = useState<string>("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
-
   const [sessionId, setSessionId] = useState<string>("");
+
+  // Generates a brand new distinct Session ID token only when the page initializes/refreshes
   useEffect(() => {
     const randomId = "session-" + Math.random().toString(36).substring(2, 15);
     setSessionId(randomId);
   }, []);
-  
+
   const chatEndRef = useRef<HTMLDivElement>(null);
 
+  // Smoothly snaps the chat panel window view downward when new stream chunks roll in
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
@@ -32,20 +34,8 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
   const handleSendMessage = async (): Promise<void> => {
     const userQuery = input.trim();
     if (!userQuery || loading) return;
-    
-    setInput("");
-    setMessages((prev) => [...prev, { sender: 'user', text: userQuery }, { sender: 'agent', text: "Thinking..." }]);
-    setLoading(true);
 
-    try {
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ 
-          message: userQuery, 
-          sessionId: sessionId
-        })
-      });
+    setInput("");
 
     setMessages((prev) => [
       ...prev,
@@ -58,7 +48,10 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
       const response = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: userQuery })
+        body: JSON.stringify({ 
+          message: userQuery,
+          sessionId: sessionId
+        })
       });
 
       if (!response.ok) throw new Error(`Status error ${response.status}`);
@@ -67,7 +60,6 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       
-      // Clear out the placeholder text to prepare for incoming real-time chunks
       setMessages((prev) => {
         const updated = [...prev];
         if (updated.length > 0) {
@@ -130,13 +122,13 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
       {isOpen && (
         <div className={`${windowStyles} w-80 sm:w-96 mb-4 flex flex-col space-y-3 transition-all duration-200`}>
           <div className="flex justify-between items-center border-b pb-2">
-            <h3 className="font-bold text-sm tracking-tight">Lisye's Research AI Agent</h3>
+            <h3 className="font-bold text-sm tracking-tight">Ask Lisye's Thesis AI Agent</h3>
             <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-600 text-xs font-bold px-1">✕</button>
           </div>
           
           <div className="h-60 overflow-y-auto p-2 bg-slate-50 border rounded text-xs flex flex-col space-y-3 overflow-x-hidden">
             {messages.length === 0 ? (
-              <div className="text-slate-400 text-center mt-24">Ask a question about my research!</div>
+              <div className="text-slate-400 text-center mt-24">Ask a question about Chapter 1!</div>
             ) : (
               messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -149,11 +141,9 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
                 </div>
               ))
             )}
-            {/* Invisible anchor for automatic scrolling */}
             <div ref={chatEndRef} />
           </div>
           
-          {/* Input Panel */}
           <div className="flex space-x-2">
             <input 
               type="text" 
