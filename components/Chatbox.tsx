@@ -122,13 +122,13 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
       {isOpen && (
         <div className={`${windowStyles} w-80 sm:w-96 mb-4 flex flex-col space-y-3 transition-all duration-200`}>
           <div className="flex justify-between items-center border-b pb-2">
-            <h3 className="font-bold text-sm tracking-tight">Ask Lisye's Thesis AI Agent</h3>
+            <h3 className="font-bold text-sm tracking-tight">Lisye's Research AI Agent</h3>
             <button onClick={() => setIsOpen(false)} className="text-slate-400 hover:text-slate-600 text-xs font-bold px-1">✕</button>
           </div>
           
           <div className="h-60 overflow-y-auto p-2 bg-slate-50 border rounded text-xs flex flex-col space-y-3 overflow-x-hidden">
             {messages.length === 0 ? (
-              <div className="text-slate-400 text-center mt-24">Ask a question about Chapter 1!</div>
+              <div className="text-slate-400 text-center mt-24">Ask a question about my research!</div>
             ) : (
               messages.map((msg, idx) => (
                 <div key={idx} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
