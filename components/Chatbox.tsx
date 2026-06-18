@@ -16,6 +16,12 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
   const [input, setInput] = useState<string>("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
+
+  const [sessionId, setSessionId] = useState<string>("");
+  useEffect(() => {
+    const randomId = "session-" + Math.random().toString(36).substring(2, 15);
+    setSessionId(randomId);
+  }, []);
   
   const chatEndRef = useRef<HTMLDivElement>(null);
 
@@ -28,6 +34,18 @@ export default function Chatbox({ currentStyle = 'corporate' }: ChatboxProps): R
     if (!userQuery || loading) return;
     
     setInput("");
+    setMessages((prev) => [...prev, { sender: 'user', text: userQuery }, { sender: 'agent', text: "Thinking..." }]);
+    setLoading(true);
+
+    try {
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          message: userQuery, 
+          sessionId: sessionId
+        })
+      });
 
     setMessages((prev) => [
       ...prev,
