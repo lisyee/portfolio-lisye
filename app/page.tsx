@@ -13,7 +13,6 @@ export const dynamic = 'force-dynamic';
 
 export default async function Home({ searchParams }: { searchParams: any }) {
   const errorMsg = searchParams?.error;
-
   const currentStyle = searchParams?.style || 'corporate';
   
   let commentList = [];
@@ -71,13 +70,13 @@ export default async function Home({ searchParams }: { searchParams: any }) {
           <Awards />
         </div>
         
-        <hr className={currentStyle === 'minimalist' ? 'hidden' : 'border-slate-200'} />
-        
         <div className={currentStyle === 'minimalist' ? 'bg-transparent shadow-none border-none p-0' : ''}>
+          <hr className={`mb-12 ${currentStyle === 'minimalist' ? 'hidden' : 'border-slate-200'}`} />
           <Guestbook commentList={commentList} errorMsg={errorMsg} dbConnected={dbConnected} />
         </div>
         
       </main>
+      
       <Chatbox currentStyle={currentStyle} />
     </div>
   );
