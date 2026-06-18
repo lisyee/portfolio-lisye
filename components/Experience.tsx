@@ -6,7 +6,7 @@ export default function Experience() {
         {/* GMT Global Inc */}
         <div className="border-l-4 border-blue-500 pl-4">
           <h3 className="text-xl font-bold text-slate-900">Software Engineer</h3>
-          <p className="text-slate-500 font-medium">高明鐵企業股份有限公司 (GMT Global Inc.) | Feb 2025 - Aug 2026</p>
+          <p className="text-slate-500 font-medium">高明鐵企業股份有限公司 (GMT Global Inc.) | Feb 2025 - July 2026</p>
           {/* Changed to list-outside pl-5 for perfect alignment */}
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             {/* Added text-justify to each list item */}
