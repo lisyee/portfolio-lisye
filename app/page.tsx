@@ -1,3 +1,4 @@
+"use client";
 import { sql } from '@vercel/postgres';
 import Hero from '../components/Hero';
 import About from '../components/About';
