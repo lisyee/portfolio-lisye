@@ -5,7 +5,7 @@ export default function Hero() {
         {/* Profile Picture */}
         <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-blue-500 shadow-md flex-shrink-0">
           <img 
-            src="/profile.png" 
+            src="/CVImage2.png" 
             alt="Ms. Lisye" 
             className="w-full h-full object-cover"
           />
