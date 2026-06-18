@@ -40,7 +40,20 @@ export default function Experience() {
               <strong>Hardware Optimization:</strong> Built and configured high-end PC/Server infrastructure to enhance lab computational capacity for intensive AI training.
             </li>
             <li className="text-justify">
-              <strong>LLM Development:</strong> Developed and optimized Speech-to-Text applications for Large Language Models (LLMs), focusing on improving natural language processing efficiency and system integration.
+              <strong>LLM AWS AI & RAG Architecture:</strong> Designed and deployed an autonomous AI Agent using AWS Bedrock
+                      (Amazon Nova) and Amazon OpenSearch Serverless for advanced Retrieval-Augmented Generation
+                      (RAG). Implemented intelligent intent routing via specialized Knowledge Base descriptions to
+                      optimize data retrieval and eliminate model hallucination.
+            </li>           
+            <li className="text-justify">
+              <strong>Full-Stack Integration & Security:</strong> Developed a secure web chatbox component in React, connecting
+                      it to AWS Bedrock via Python (Boto3) and Vercel Serverless Functions while ensuring zero-exposure
+                      credential security using environment variables.
+            </li>
+            <li className="text-justify">
+              <strong>Performance & FinOps Optimization:</strong> Handled real-time asynchronous event-driven stream
+              processing (byte-decoding) for instant chat responses and successfully enforced FinOps best practices
+              by managing cloud compute-unit (OCU) lifecycles to eliminate unnecessary infrastructure costs.
             </li>
           </ul>
         </div>
