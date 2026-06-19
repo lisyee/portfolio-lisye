@@ -1,7 +1,7 @@
 export default function Skills() {
-  const languages = ['C++', 'C#', 'C', 'Python', 'JavaScript', 'HTML', 'PHP', 'CSS'];
-  const frameworks = ['OpenCV', 'CUDA', 'TensorFlow', 'Scikit-learn', 'React'];
-  const tools = ['GitLab (CI/CD)', 'Docker Swarm', 'EtherCAT', 'Linux RT', 'MATLAB', 'INtime', 'NexECM'];
+  const languages = ['C++', 'C#', 'C', 'Python', 'JavaScript', 'SQL', 'HTML', 'PHP', 'CSS'];
+  const frameworks = ['Next.js 14', 'OpenCV', 'CUDA', 'TensorFlow', 'Scikit-learn', 'React', 'Boto3 (AWS SDK)'];
+  const tools = ['AWS', 'Vercel', 'GitLab (CI/CD)', 'Docker Swarm', 'EtherCAT', 'Linux RT', 'MATLAB', 'INtime', 'NexECM'];
 
   return (
     <section className="space-y-6">
