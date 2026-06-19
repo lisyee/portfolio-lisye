@@ -34,7 +34,7 @@ export default function Skills() {
           <h3 className="font-semibold text-slate-700 mb-2">Tools & Platforms</h3>
           <div className="flex flex-wrap gap-2">
             {tools.map((skill) => (
-              <span key={skill} className="bg-slate-800 text-slate-100 px-2.5 py-1 rounded-md text-sm font-medium">
+              <span key={skill} className="bg-slate-500 text-slate-100 px-2.5 py-1 rounded-md text-sm font-medium">
                 {skill}
               </span>
             ))}
