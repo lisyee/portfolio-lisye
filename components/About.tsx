@@ -3,12 +3,14 @@ export default function About() {
     <section>
       <h2 className="text-2xl font-bold text-slate-800 mb-4">About Me</h2>
       <p className="text-slate-600 leading-relaxed text-lg text-justify">
-        Software Engineer with 3+ years of experience bridging robotics, computer vision, and cloud AI
-        automation. Specialized in building real-time, low-latency applications, with deep experience translating
-        complex industrial MATLAB models into production C++ and C# code. Hands-on experience architecting
-        RAG-based AI agents via AWS Bedrock and managing secure deployments across Docker Swarm,
-        GitLab, and Vercel Serverless. Combines a strong core engineering background with an emphasis on
-        FinOps and cost-efficiency when delivering solutions within global teams.
+        I am a software engineer with over 3 years of experience working across both 
+        high-performance systems engineering and cloud AI development. My background 
+        is built on writing production-ready C++, C#, and Python code to handle 
+        complex system integrations and low-latency applications. Alongside this core 
+        engineering foundation, I have hands-on experience building end-to-end AI Agents 
+        and RAG systems using AWS Bedrock. This mix allows me to build AI applications 
+        with a practical mindset, ensuring that the software is not just smart, 
+        but also fast, stable, and cost-efficient (FinOps) when deployed. 
       </p>
     </section>
   );
