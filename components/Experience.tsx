@@ -9,21 +9,20 @@ export default function Experience() {
           <p className="text-slate-500 font-medium">高明鐵企業股份有限公司 (GMT Global Inc.) | Feb 2025 - July 2026</p>
           {/* Changed to list-outside pl-5 for perfect alignment */}
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
-            {/* Added text-justify to each list item */}
             <li className="text-justify">
-              <strong>Manufacturing Automation & Control:</strong> Developed low-latency control solutions using EtherCAT protocols (NexECM) on Linux RT and INtime platforms, ensuring high-precision synchronization for multi-device Industrial PC (IPC) environments.
+              <strong>Automation & Control:</strong> Programmed low-latency machine control solutions using EtherCAT protocols on Linux RT and INtime platforms to ensure high-precision hardware synchronization.[cite: 1]
             </li>
             <li className="text-justify">
-              <strong>High-Performance Computing:</strong> Developed and optimized real-time image processing algorithms in C++ and OpenCV, implementing CUDA kernels to offload intensive computations to the GPU, significantly increasing throughput for multi-camera systems.
+              <strong>High-Performance Computing:</strong> Wrote and optimized image processing algorithms in C++ and OpenCV, using CUDA kernels to offload intensive calculations to the GPU for multi-camera setups on LinuxRT platform.[cite: 1]
             </li>
             <li className="text-justify">
-              <strong>Systems Integration (C++/C#):</strong> Engineered seamless interoperability between low-level C++ DLLs and high-level C# applications via P/Invoke, optimizing data flow within Windows-based mission-critical environments.
+              <strong>Systems Integration:</strong> Used P/Invoke to link low-level C++ DLLs with high-level C# desktop applications, fixing data flow bottlenecks in critical industrial environments.[cite: 1]
             </li>
             <li className="text-justify">
-              <strong>Robotics & Kinematics:</strong> Designed and implemented complex Inverse Kinematics (IK) solvers for Stewart platforms and hexapod systems, translating mathematical models from MATLAB into production-ready, real-time C++ code.
+              <strong>Model Translation:</strong> Translated complex kinematic and mathematical models from MATLAB into real-time, production-ready C++ code for Stewart platforms.[cite: 1]
             </li>
             <li className="text-justify">
-              <strong>Lifecycle & Architecture:</strong> Led the migration of legacy codebases to GitLab, establishing modular multi-repository structures and standardized version control workflows to improve team collaboration and software maintainability.
+              <strong>DevOps & Workflow:</strong> Cleaned up legacy codebases by moving everything to GitLab, establishing clear multi-repository structures and standard version control rules for the team.[cite: 1]
             </li>
           </ul>
         </div>
@@ -33,27 +32,18 @@ export default function Experience() {
           <h3 className="text-xl font-bold text-slate-900">Artificial Intelligence (AI) Lab Project Assistant</h3>
           <p className="text-slate-500 font-medium">AI Lab, National Dong Hwa University | Sep 2024 - Dec 2024</p>
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
+            
             <li className="text-justify">
-              <strong>Infrastructure & System Monitoring:</strong> Managed high-performance AI lab servers and constructed a Docker Swarm cluster to facilitate scalable parallel processing and minimize downtime.
+              <strong>AI Agent & RAG Architecture:</strong> Built an AI Agent from scratch using AWS Bedrock (Amazon Nova) and Amazon OpenSearch Serverless for RAG. Configured intent routing in the knowledge base to stop model hallucinations and improve retrieval accuracy.
             </li>
             <li className="text-justify">
-              <strong>Hardware Optimization:</strong> Built and configured high-end PC/Server infrastructure to enhance lab computational capacity for intensive AI training.
+              <strong>API & Full-Stack Integration:</strong> Created a secure React chat interface that talks to AWS Bedrock via Python (Boto3) and Vercel Serverless, keeping all API keys safe using environment variables.
             </li>
             <li className="text-justify">
-              <strong>LLM AWS AI & RAG Architecture:</strong> Designed and deployed an autonomous AI Agent using AWS Bedrock
-                      (Amazon Nova) and Amazon OpenSearch Serverless for advanced Retrieval-Augmented Generation
-                      (RAG). Implemented intelligent intent routing via specialized Knowledge Base descriptions to
-                      optimize data retrieval and eliminate model hallucination.
-            </li>           
-            <li className="text-justify">
-              <strong>Full-Stack Integration & Security:</strong> Developed a secure web chatbox component in React, connecting
-                      it to AWS Bedrock via Python (Boto3) and Vercel Serverless Functions while ensuring zero-exposure
-                      credential security using environment variables.
+              <strong>Performance & FinOps:</strong> Reduced chat latency by handling data as asynchronous byte streams for instant responses, and kept AWS costs down by managing cloud compute-unit (OCU) lifecycles.
             </li>
             <li className="text-justify">
-              <strong>Performance & FinOps Optimization:</strong> Handled real-time asynchronous event-driven stream
-              processing (byte-decoding) for instant chat responses and successfully enforced FinOps best practices
-              by managing cloud compute-unit (OCU) lifecycles to eliminate unnecessary infrastructure costs.
+              <strong>System Upkeep:</strong> Maintained the lab's high-performance servers and set up a Docker Swarm cluster to handle heavy, parallel AI training workloads without downtime.
             </li>
           </ul>
         </div>
@@ -64,13 +54,13 @@ export default function Experience() {
           <p className="text-slate-500 font-medium">AI Lab, National Dong Hwa University | Jan 2023 - Jun 2024</p>
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             <li className="text-justify">
-              <strong>Predictive Analytics:</strong> Developed an early-warning system for student performance using Random Forest algorithms, analyzing complex datasets to predict GPAs and improve educational outcomes.
+              <strong>Predictive Analytics:</strong> Built a student performance early-warning system by training Random Forest models to analyze academic datasets and predict GPAs.
             </li>
             <li className="text-justify">
-              <strong>Full-Stack AI Research:</strong> Implemented TensorFlow, Scikit-learn, and OpenCV to build diverse projects, including a Smart Solar Panel Site Assessment System and Remote Veterinarian Services.
+              <strong>AI Module Development:</strong> Used TensorFlow, Scikit-learn, and OpenCV to build core features for lab projects, including a solar panel assessment tool and a remote vet service platform.
             </li>
             <li className="text-justify">
-              <strong>Systems Troubleshooting:</strong> Collaborated with researchers to integrate AI-driven solutions and resolve technical bottlenecks in high-computation environments.
+              <strong>Technical Troubleshooting:</strong> Worked with other researchers to debug performance issues and integrate machine learning models into high-computation environments.
             </li>
           </ul>
         </div>
@@ -81,10 +71,10 @@ export default function Experience() {
           <p className="text-slate-500 font-medium">Fundamental Mobile Programming Course, National Dong Hwa University | Feb 2023 - Jan 2024</p>
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             <li className="text-justify">
-              <strong>Leadership & Scale:</strong> Supervised sections of 160 students for the Fundamental Mobile Programming course; achieved a 4.3/4.5 student evaluation rating, reflecting excellence in technical communication.
+              <strong>Technical Communication:</strong> Taught and managed lab sections of 160 students for a mobile programming course, earning a 4.3/4.5 instructor rating.
             </li>
             <li className="text-justify">
-              <strong>Assessment Design:</strong> Created comprehensive examinations and quizzes to evaluate programming proficiency and project-based learning.
+              <strong>Assessment Design:</strong> Designed exams and practical coding quizzes to test students' programming logic and project work.
             </li>
           </ul>
         </div>
@@ -92,13 +82,13 @@ export default function Experience() {
         {/* Other Professional Experience */}
         <div className="border-l-4 border-slate-300 pl-4">
           <h3 className="text-xl font-bold text-slate-900">Other Professional Experience</h3>
-          <p className="text-slate-500 font-medium">Freelance & Corporate Roles | Feb 2018 - June 2022</p>
+          <p className="text-slate-500 font-medium">Indonesia | Feb 2018 - June 2022</p>
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             <li className="text-justify">
-              <strong>Computer Science Private Tutor (2019 - 2022):</strong> Mentored students in Java, C++, and Web Development (HTML/CSS/JS), fostering long-term interest in software engineering.
+              <strong>Computer Science Private Tutor (2019 - 2022):</strong> Tutored students in Java, C++, and basic web development (HTML/CSS/JS).
             </li>
             <li className="text-justify">
-              <strong>IT Operational Staff (2018):</strong> Managed customer data systems and performed pre-launch mobile application testing for a fintech company.
+              <strong>IT Operational Staff (2018):</strong> Worked as IT operational staff, managing customer data systems and testing mobile apps before launch for a fintech company.
             </li>
           </ul>
         </div>
