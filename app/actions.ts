@@ -8,7 +8,7 @@ export async function addComment(formData: FormData) {
   const name = (formData.get('name') as string)?.trim();
   const message = (formData.get('message') as string)?.trim();
 
-  // Basic Security Validation (Demonstrates your professionalism)
+  // Basic Security Validation
   if (!name || !message) {
     redirect(`/?error=${encodeURIComponent('Name and message cannot be empty')}`);
   }
