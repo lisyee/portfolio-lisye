@@ -10,19 +10,19 @@ export default function Experience() {
           {/* Changed to list-outside pl-5 for perfect alignment */}
           <ul className="list-disc list-outside pl-5 text-slate-600 mt-2 space-y-2">
             <li className="text-justify">
-              <strong>Automation & Control:</strong> Programmed low-latency machine control solutions using EtherCAT protocols on Linux RT and INtime platforms to ensure high-precision hardware synchronization.[cite: 1]
+              <strong>Automation & Control:</strong> Programmed low-latency machine control solutions using EtherCAT protocols on Linux RT and INtime platforms to ensure high-precision hardware synchronization.
             </li>
             <li className="text-justify">
-              <strong>High-Performance Computing:</strong> Wrote and optimized image processing algorithms in C++ and OpenCV, using CUDA kernels to offload intensive calculations to the GPU for multi-camera setups on LinuxRT platform.[cite: 1]
+              <strong>High-Performance Computing:</strong> Wrote and optimized image processing algorithms in C++ and OpenCV, using CUDA kernels to offload intensive calculations to the GPU for multi-camera setups on LinuxRT platform.
             </li>
             <li className="text-justify">
-              <strong>Systems Integration:</strong> Used P/Invoke to link low-level C++ DLLs with high-level C# desktop applications, fixing data flow bottlenecks in critical industrial environments.[cite: 1]
+              <strong>Systems Integration:</strong> Used P/Invoke to link low-level C++ DLLs with high-level C# desktop applications, fixing data flow bottlenecks in critical industrial environments.
             </li>
             <li className="text-justify">
-              <strong>Model Translation:</strong> Translated complex kinematic and mathematical models from MATLAB into real-time, production-ready C++ code for Stewart platforms.[cite: 1]
+              <strong>Model Translation:</strong> Translated complex kinematic and mathematical models from MATLAB into real-time, production-ready C++ code for Stewart platforms.
             </li>
             <li className="text-justify">
-              <strong>DevOps & Workflow:</strong> Cleaned up legacy codebases by moving everything to GitLab, establishing clear multi-repository structures and standard version control rules for the team.[cite: 1]
+              <strong>DevOps & Workflow:</strong> Cleaned up legacy codebases by moving everything to GitLab, establishing clear multi-repository structures and standard version control rules for the team.
             </li>
           </ul>
         </div>
