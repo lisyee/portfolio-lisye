@@ -7,14 +7,6 @@ import os
 
 app = FastAPI()
 
-# Vercel will read this variable automatically from settings dashboard
-client = boto3.client(
-    'bedrock-agent-runtime',
-    region_name='ap-southeast-2',
-    aws_access_key_id=os.environ.get('AWS_ACCESS_KEY_ID'),
-    aws_secret_access_key=os.environ.get('AWS_SECRET_ACCESS_KEY')
-)
-
 async def generate_bedrock_stream(user_message: str, session_id: str):
     try:
         client = boto3.client(
