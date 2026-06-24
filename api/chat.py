@@ -2,7 +2,7 @@
 from fastapi import FastAPI, Request
 from fastapi.responses import StreamingResponse
 import boto3
-import json
+import logging
 import os
 
 app = FastAPI()
