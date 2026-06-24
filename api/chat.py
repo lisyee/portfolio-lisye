@@ -28,7 +28,7 @@ async def generate_bedrock_stream(user_message: str, session_id: str):
             agentId='GFTJXV4A2X',
             agentAliasId='YQND3POFOH',
             inputText=user_message,
-            sessionId=session_id # 2. GUNAKAN SESSION ID DARI FRONTEND
+            sessionId=session_id
         )
         
         completion = response.get('completion')
