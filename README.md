@@ -1,7 +1,7 @@
 # portfolio-lisye
 
 ✨ Core Features & Interaction Guide
-1. 💬 Floating AI Chatbox (RAG & Session Sandbox)
+1. Floating AI Chatbox (RAG & Session Sandbox)
 
 Located discreetly in the bottom-right corner of the viewport, this widget opens an isolated, streaming sandbox conversational window.
 
@@ -11,7 +11,7 @@ Located discreetly in the bottom-right corner of the viewport, this widget opens
 
     Real-Time Token Streaming: Implemented using browser-native ReadableStream and TextDecoder APIs to parse binary chunks on the fly, mimicking a human-like typing effect without blocking UI responsiveness.
 
-2. 📝 Postgres-Backed Guestbook
+2. Postgres-Backed Guestbook
 
 Positioned directly below the Awards section, this component handles live user interaction.
 
@@ -19,6 +19,6 @@ Positioned directly below the Awards section, this component handles live user i
 
     Optimistic / Real-Time Feed: The rolling layout renders newly written records immediately from @vercel/postgres, refreshing the feed state dynamically without executing a full-page browser reload.
 
-3. 🎨 Adaptive UI Framework
+3. Adaptive UI Framework
 
 Supports three dynamic, hot-swappable client-side styling themes mapping to different development aesthetics: Corporate, Minimalist, and Brutalist.
